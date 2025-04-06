@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Вход</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 450px;
+        margin: 100px auto;
+        background-color: #293240;
+      }
+      h2 {
+        font-size: 45px;
+        color: #ff0000;
+        padding: 22px;
+        margin: 15px 0;
+      }
+      input {
+        width: 100%;
+        padding: 17px;
+        margin: 12px 0;
+        border: none;
+        outline: none;
+      }
+      button {
+        background: #ff4346;
+        color: rgb(255, 255, 255);
+        padding: 15px;
+        margin: 16px 0;
+        border: none;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #ff0000;
+        box-shadow: -1px 2px 13px 0px rgba(0, 0, 0, 0.45);
+      }
+      button[type="submit"] {
+        font-size: 20px;
+        letter-spacing: 5px;
+      }
+      .content {
+        height: 500px;
+        text-align: center;
+        padding: 40px 25px;
+        background: rgba(15, 34, 50, 0.4);
+        box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 1);
+        text-align: center;
+      }
+      p {
+        color: #ff4346;
+        font-size: 18px;
+      }
+      a {
+        color: #ff4346;
+      }
+      a:hover {
+        color: #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>Вход</h2>
+      <form action="login.php" method="POST">
+        <input type="email" name="email" placeholder="Email" required /><br />
+        <input
+          type="password"
+          name="password"
+          placeholder="Пароль"
+          required /><br />
+        <button type="submit">Войти</button>
+      </form>
+      <p>Нет аккаунта? <a href="index.html">Зарегистрируйтесь</a></p>
+    </div>
+  </body>
+</html>

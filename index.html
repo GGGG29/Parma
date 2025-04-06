@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parma Technologies Group</title>
+    <style>
+      /* Общие стили для header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #e9ecee;
+        color: #0f2232;
+        border-bottom: 3px solid #ff4346;
+        position: relative; /* Добавляем для позиционирования */
+        border-radius: 30px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      body {
+        background-color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Стили для фото */
+      .logo {
+        width: 205px;
+        height: 95px;
+        border-radius: 50%;
+      }
+
+      /* .profile {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+        */
+
+      /* Стили для заголовка */
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute; /* Абсолютное позиционирование */
+        left: 50%; /* Сдвигаем на 50% вправо */
+        transform: translateX(-50%); /* Центрируем */
+        margin: 0; /* Убираем отступы */
+      }
+
+      .footer {
+        background: #e9ecee;
+        color: #0f2232;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        border-top: 3px solid #ff4346;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 30px;
+      }
+      /* Общие стили для кнопки */
+      .login-button {
+        display: inline-flex; /* Используем flex для выравнивания текста и иконки */
+        align-items: center; /* Выравниваем элементы по центру вертикально */
+        justify-content: center; /* Выравниваем элементы по центру горизонтально */
+        padding: 12px 24px; /* Внутренние отступы */
+        font-size: 16px; /* Размер текста */
+        font-weight: 600; /* Жирный текст */
+        color: #0f2232; /* Цвет текста */
+        background-color: #0f2232; /* Цвет фона кнопки */
+        border-radius: 30px; /* Закругленные углы */
+        text-decoration: none; /* Убираем подчеркивание у ссылки */
+        transition: all 0.3s ease; /* Плавные переходы для анимации */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для кнопки */
+      }
+
+      /* Иконка */
+      .button-icon {
+        margin-left: 8px; /* Отступ между текстом и иконкой */
+        display: flex; /* Используем flex для выравнивания SVG */
+        align-items: center; /* Выравниваем SVG по центру вертикально */
+        transition: transform 0.3s ease; /* Анимация для иконки */
+      }
+
+      /* Стили для SVG */
+      .button-icon svg {
+        width: 40px; /* Ширина SVG */
+        height: 39px; /* Высота SVG */
+        fill: #f93949; /* Цвет заливки SVG */
+      }
+
+      /* Анимация при наведении */
+      .login-button:hover {
+        background-color: #e9ecee; /* Изменение цвета фона при наведении */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Увеличение тени при наведении */
+        transform: translateY(-2px); /* Легкий сдвиг вверх */
+      }
+
+      /* Анимация иконки при наведении */
+      .login-button:hover .button-icon {
+        transform: translateX(4px); /* Сдвиг иконки вправо */
+      }
+
+      /* Адаптивность для мобильных устройств */
+      @media (max-width: 480px) {
+        .login-button {
+          padding: 10px 20px; /* Уменьшаем отступы */
+          font-size: 14px; /* Уменьшаем размер текста */
+        }
+
+        .button-icon svg {
+          width: 30px; /* Уменьшаем размер SVG */
+          height: 29px;
+        }
+      }
+
+      /* Медиа-запросы для адаптивности */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          padding: 10px;
+        }
+
+        .title {
+          font-size: 20px;
+          position: static; /* Возвращаем обычное позиционирование */
+          transform: none; /* Отключаем трансформацию */
+          margin: 10px 0; /* Добавляем отступы */
+        }
+
+        .logo,
+        .profile {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .title {
+          font-size: 18px;
+        }
+
+        .logo,
+        .profile {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Фото слева -->
+        <img src="../Assets/img/Логотип (2).svg" alt="Логотип" class="logo" />
+
+        <!-- Заголовок по центру -->
+        <h1 class="title">Кафетерий</h1>
+
+        <!-- Фото справа -->
+        <!-- <img src="../Assets/img/Рисунок1.svg" alt="Профиль" class="profile" /> -->
+        <!-- Кнопка входа -->
+        <a href="./login.html" class="login-button">
+          <span class="button-text">Вход</span>
+          <span class="button-icon">
+            <!-- Вставляем ваше SVG-изображение -->
+            <svg
+              width="40"
+              height="39"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              overflow="hidden">
+              <g transform="translate(-1041 -213)">
+                <g>
+                  <g>
+                    <g>
+                      <path
+                        d="M1061 216.167C1056.85 216.167 1053.48 219.539 1053.48 223.688 1053.48 227.757 1056.66 231.05 1060.81 231.193 1060.94 231.177 1061.06 231.177 1061.16 231.193 1061.19 231.193 1061.21 231.193 1061.24 231.193 1061.25 231.193 1061.25 231.193 1061.27 231.193 1065.32 231.05 1068.51 227.757 1068.52 223.688 1068.52 219.539 1065.15 216.167 1061 216.167Z"
+                        fill="#F93949" />
+                      <path
+                        d="M1069.04 235.404C1064.63 232.459 1057.42 232.459 1052.97 235.404 1050.96 236.75 1049.85 238.571 1049.85 240.518 1049.85 242.466 1050.96 244.271 1052.96 245.601 1055.17 247.089 1058.09 247.833 1061 247.833 1063.91 247.833 1066.83 247.089 1069.04 245.601 1071.04 244.255 1072.15 242.45 1072.15 240.487 1072.13 238.539 1071.04 236.734 1069.04 235.404Z"
+                        fill="#F93949" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </a>
+      </header>
+    </div>
+    <main>
+      <br />
+    </main>
+    <footer class="footer">
+      <p>© 2025 Parma Technologies Group. Все права защищены.</p>
+    </footer>
+  </body>
+</html>
